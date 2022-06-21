@@ -38,7 +38,7 @@ class User(AbstractUser):
     drivfile=models.ImageField(upload_to='drive_liscence/%Y/%m/%d', max_length=254)
     objects = CustomUserManager()
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["username"]
+    REQUIRED_FIELDS = ["username","password"]
     objects = CustomUserManager()
     def __str__(self):
         return self.username
